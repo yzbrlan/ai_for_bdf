@@ -1,12 +1,12 @@
 
 from openai import OpenAI
 
-client = OpenAI(api_key="YOUR_KEY", base_url="https://api.siliconflow.cn/v1")
+client = OpenAI(api_key="sk-oscozltnsdfkayszykrkkedaccqdkroauugqfavifncvugzg", base_url="https://api.siliconflow.cn/v1")
 
 response = client.chat.completions.create(
     model="deepseek-ai/DeepSeek-V3",
     messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "system", "content": "You are familiar with MSC nastran and the BDF input files."},
         {"role": "user", "content": "Write a haiku about recursion in programming."}
     ],
     temperature=0.7,
