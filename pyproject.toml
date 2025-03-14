@@ -1,0 +1,28 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_for_bdf"
+version = "0.1.0"
+description = "AI for BDF project"
+authors = [
+    { name = "AI4IS", email = "your.email@example.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ai_for_bdf"
+
+dependencies = [
+"OpenAI",
+"langchain",
+"langchain_core",
+"langchain_openai",
+"langchain_text_splitters",
+"langchain_community",
+"langchain_chroma"
+]
