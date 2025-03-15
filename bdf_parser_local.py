@@ -42,7 +42,7 @@ def strict_qa_system(file_path):
 
     # 核心模型设置 ✅
     llm = OllamaLLM(base_url='http://localhost:11434',
-    model="qwen2.5:7b",    # 使用正确的Ollama模型名称
+    model="qwen2.5:14b",    # 使用正确的Ollama模型名称
     temperature=0.2,
     num_predict=512      # 控制生成长度)
                 )
