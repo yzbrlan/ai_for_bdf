@@ -5,3 +5,5 @@ langchain_openai
 langchain_text_splitters
 langchain_community
 langchain_chroma
+langchain_ollama
+json5

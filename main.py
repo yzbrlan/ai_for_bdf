@@ -1,7 +1,13 @@
 
 from openai import OpenAI
 
-client = OpenAI(api_key="sk-oscozltnsdfkayszykrkkedaccqdkroauugqfavifncvugzg", base_url="https://api.siliconflow.cn/v1")
+client = OpenAI(api_key="sk-zcpmjwctlnkthagcorztornyziblyxvkjireovscqsymjqyn", base_url="https://api.siliconflow.cn/v1")
+
+#attach external file
+# file = client.files.create(
+#     file=open("test.bdf", "rb"),
+#     purpose="assistants"
+# )
 
 response = client.chat.completions.create(
     model="deepseek-ai/DeepSeek-V3",
@@ -15,4 +21,5 @@ response = client.chat.completions.create(
 )
 # 逐步接收并处理响应
 for chunk in response:
+    breakpoint()
     print(chunk.choices[0].delta.content)
