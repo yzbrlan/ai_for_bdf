@@ -72,7 +72,7 @@ $ Loads for Load Case : Default
 SPCADD   2       1
 LOAD     2      1.      1.       1
 $ Displacement Constraints of Load Set : fixed
-SPC1     1       123456  1
+SPC1     1       1  1
 $ Nodal Forces of Load Set : force
 FORCE    1       11      0      1000.    0.      0.     -1.
 $ Referenced Coordinate Frames
