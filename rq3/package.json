@@ -51,9 +51,9 @@
         "First modify the value of Poisson's Ratio to {19} in all material cards with MID of {[1]} in BULK data, then return the card",
         //Poisson's Ratio范围为 -1 ≤ NU ≤ 0.5
         "First modify the value of Young's Modulus to {68} in all material cards with MID of {[1]} in BULK data, then return the card",
-        "First modify the value of force magnitude to {7999} in all load cards including LOAD, FORCE with ID {[1]} in BULK data, then return the card",
+//        "First modify the value of force magnitude to {7999} in all load cards including LOAD, FORCE with ID {[1]} in BULK data, then return the card",
         // 没有force卡
-        "First modify the id of the grid node being constrained with 78 to {177} in all constraint cards including SPC, MPC with ID {[3]} in BULK data, then return the card",
+//        "First modify the id of the grid node being constrained with 78 to {177} in all constraint cards including SPC, MPC with ID {[3]} in BULK data, then return the card",
         // 没有被约束的单节点78的spc卡
         "First modify the id of the grid node being constrained with 73 to {177} in all constraint cards including SPC, MPC with ID {[3]} in BULK data, then return the card"
       ]

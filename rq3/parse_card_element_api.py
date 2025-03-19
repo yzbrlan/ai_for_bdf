@@ -105,20 +105,22 @@ if __name__ == "__main__":
         bdf_file_path = os.path.join(root_path, "data", bdf_file_name)
         logger.info(f"-----------------current bdf file is 【{bdf_file_name}】")
 
-        # 遍历不同大模型
-        remote_model_list = params["remote_model_list"]
-        for remote_model_param_dict in remote_model_list:
+        question_param_list = bdf_param_dict["question_param_list"]
+
+        count = 1
+        for question in question_param_list:
+            # TODO:组装问题
+            question = question
             logger.info("")
-            logger.info(f"-----------------current model is 【{remote_model_param_dict['model']}】")
+            logger.info(f"问题【{count}】is【 {question} 】")
 
-            qa_chain = remote_strict_qa_system(bdf_file_path, remote_model_param_dict)
+            # 遍历不同大模型
+            remote_model_list = params["remote_model_list"]
+            for remote_model_param_dict in remote_model_list:
+                logger.info("")
+                logger.info(f"-----------------current model is 【{remote_model_param_dict['model']}】")
 
-            question_param_list = bdf_param_dict["question_param_list"]
-
-            count = 1
-            for question in question_param_list:
-                # TODO:组装问题
-                question = question
+                qa_chain = remote_strict_qa_system(bdf_file_path, remote_model_param_dict)
 
                 logger.info("")
                 logger.info(f"问题【{count}】is【 {question} 】")
@@ -128,4 +130,5 @@ if __name__ == "__main__":
                 logger.info(
                     f"token usage =【{response.response_metadata['token_usage']['completion_tokens']}】,time usage =【{start_time - start_time}】")
                 logger.info(f"响应【{count}】is \n{response.content}")
-                count += 1
+
+            count += 1
