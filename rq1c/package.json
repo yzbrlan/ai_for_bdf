@@ -1,0 +1,60 @@
+{
+  "remote_model_list": [
+    {
+      "model": "deepseek-ai/DeepSeek-V3",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-zcpmjwctlnkthagcorztornyziblyxvkjireovscqsymjqyn",
+      "temperature": 0
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-zcpmjwctlnkthagcorztornyziblyxvkjireovscqsymjqyn",
+      "temperature": 0
+    },
+    {
+      "model": "Qwen/QwQ-32B",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-zcpmjwctlnkthagcorztornyziblyxvkjireovscqsymjqyn",
+      "temperature": 0
+    },
+    {
+      "model": "Qwen/Qwen2.5-14B-Instruct",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-zcpmjwctlnkthagcorztornyziblyxvkjireovscqsymjqyn",
+      "temperature": 0
+    },
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-zcpmjwctlnkthagcorztornyziblyxvkjireovscqsymjqyn",
+      "temperature": 0
+    }
+  ],
+  "bdf_param_list": [
+    {
+      "bdf_file_name": "cantilever_2014.1.bdf.txt",
+      "question_param_list": [
+        "First modify the value of the Y axis of the coordinate axis to {99} in all grid cards with ID {[4, 7]} in BULK data, then return the card",
+        "First modify the value of start point GA to {99} in all cbeam cards with ID {[4, 6]} in BULK data, then return the card",
+        "First modify the value of Poisson's Ratio to {99} in all material cards with MID of {[1]} in BULK data, then return the card ",
+        "First modify the value of Young's Modulus to {99} in all material cards with MID of {[1]} in BULK data, then return the card",
+        "First modify the value of force magnitude to {7999} in all load cards including LOAD, FORCE with ID {[1]} in BULK data, then return the card",
+        "First modify the degree of freedom code of the constraint to full constraint in all constraint cards including SPC, MPC with ID {[1]} in BULK data, then return the card"
+      ]
+    },
+    {
+      "bdf_file_name": "cbush_test.bdf.txt",
+      "question_param_list": [
+        "First modify the value of the Y axis to {99} in all grid cards with ID {[4, 6]} in BULK data, then return the card",
+        "First modify the value of Spring stiffness in X to {9999} in all bush cards with PID with ID {[2]} in BULK data, then return the card",
+        "First modify the value of Poisson's Ratio to {99} in all material cards with MID of {[1]} in BULK data, then return the card",
+        "First modify the value of Young's Modulus to {99} in all material cards with MID of {[1]} in BULK data, then return the card",
+        "First modify the id of the grid node being constrained with 73 to {999} in all constraint cards including SPC with ID {[3]} in BULK data, then return the card",
+        "First modify the degree of the grid node being constrained to full constraint whose id of the grid node being constrained is 8 in all constraint cards including SPC with ID {[3]} in BULK data, then return the card",
+        "First modify the coordinates of the origin of the coordinate system to {9,9,9} in all CORD2R cards with ID {[3]} in BULK data, then return the card",
+        "First modify the value of the MID to {99} in all PSOLID cards with ID {[1]} in BULK data, then return the card"
+      ]
+    }
+  ]
+}

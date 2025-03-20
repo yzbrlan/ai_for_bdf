@@ -35,7 +35,7 @@ def logger_config(xp_path, logging_name):
     # 输出DEBUG及以上级别的信息，针对所有输出的第一层过滤
     logger.setLevel(level=logging.INFO)
     # 获取文件日志句柄并设置日志级别，第二层过滤
-    handler = logging.FileHandler(os.path.join(xp_path, "log.txt"), encoding='UTF-8')
+    handler = logging.FileHandler(os.path.join(xp_path, logging_name), encoding='UTF-8')
     handler.setLevel(logging.INFO)
     # 生成并设置文件日志格式
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
