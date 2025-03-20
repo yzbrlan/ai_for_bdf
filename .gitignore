@@ -1,3 +1,5 @@
 .idea/
 *.toml
 rq*/result
+*.DS_Store
+*/__pycache
