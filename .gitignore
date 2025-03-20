@@ -2,4 +2,4 @@
 *.toml
 rq*/result
 *.DS_Store
-rq*/__pycache
+rq*/__pycache__
