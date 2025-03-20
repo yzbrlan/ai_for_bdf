@@ -1,5 +1,5 @@
 .idea/
 *.toml
-rq*/result
-*.DS_Store
-rq*/__pycache__
+rq1c/result
+.DS_Store
+rq1c/__pycache__

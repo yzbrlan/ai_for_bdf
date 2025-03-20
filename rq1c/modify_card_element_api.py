@@ -13,10 +13,8 @@ sys.path.append("../../")
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import ChatOpenAI
-from langchain_ollama import OllamaLLM
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-from langchain_community.llms import Ollama
 from langchain_core.callbacks import BaseCallbackHandler
 
 # 严格模式模板
@@ -89,7 +87,7 @@ if __name__ == "__main__":
     date_str = time.strftime('%Y-%m-%d', time.localtime())
     time_str = time.strftime('%H:%M:%S', time.localtime())
     result_path = os.path.join(os.getcwd(), f"result/{date_str}")
-    logger = logger_config(result_path, f"{time_str}.log")
+    logger = logger_config(result_path, f"{time_str}.txt")
 
     logger.info(f"-------------------------start new experiment-------------------------------")
 
