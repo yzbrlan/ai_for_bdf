@@ -4,10 +4,11 @@ import time
 
 import json5
 
+from rq1c.file_util import logger_config
+
 sys.path.append("./")
 sys.path.append("../..")
 sys.path.append("../../")
-from utils.file_util import logger_config
 
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -88,7 +89,7 @@ if __name__ == "__main__":
     date_str = time.strftime('%Y-%m-%d', time.localtime())
     time_str = time.strftime('%H:%M:%S', time.localtime())
     result_path = os.path.join(os.getcwd(), f"result/{date_str}")
-    logger = logger_config(result_path, f"log.txt")
+    logger = logger_config(result_path, f"{time_str}.log")
 
     logger.info(f"-------------------------start new experiment-------------------------------")
 
@@ -112,7 +113,7 @@ if __name__ == "__main__":
             # TODO:组装问题
             question = question
             logger.info("")
-            logger.info(f"问题【{count}】is【 {question} 】")
+            logger.info(f"bdf【{bdf_file_name}】问题【{count}】is【 {question} 】")
 
             # 遍历不同大模型
             remote_model_list = params["remote_model_list"]
@@ -123,12 +124,12 @@ if __name__ == "__main__":
                 qa_chain = remote_strict_qa_system(bdf_file_path, remote_model_param_dict)
 
                 logger.info("")
-                logger.info(f"问题【{count}】is【 {question} 】")
+                logger.info(f"bdf【{bdf_file_name}】问题【{count}】is【 {question} 】")
                 start_time = time.time()
                 response = qa_chain.invoke(question, config={"callbacks": [TokenCountCallbackHandler()]})
 
                 logger.info(
                     f"token usage =【{response.response_metadata['token_usage']['completion_tokens']}】,time usage =【{start_time - start_time}】")
-                logger.info(f"响应【{count}】is \n{response.content}")
+                logger.info(f"model【{remote_model_param_dict['model']}】响应【{count}】is \n{response.content}")
 
             count += 1
