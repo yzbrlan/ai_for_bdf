@@ -1,0 +1,238 @@
+2025-03-27 13:27:34,378 - 13-27-34.txt - INFO - -------------------------start new experiment-------------------------------
+2025-03-27 13:27:34,411 - 13-27-34.txt - INFO - current package.json param is {
+    remote_model_list: [
+        {
+            model: "Qwen/Qwen2.5-32B-Instruct",
+            base_url: "https://api.siliconflow.cn/v1",
+            api_key: "sk-kabdoryzkpunwaugrcakokaiggmrmfwrmnmmscfiqjbngcbw",
+            temperature: 0,
+        },
+        {
+            model: "deepseek-ai/DeepSeek-R1",
+            base_url: "https://api.siliconflow.cn/v1",
+            api_key: "sk-kabdoryzkpunwaugrcakokaiggmrmfwrmnmmscfiqjbngcbw",
+            temperature: 0,
+        },
+    ],
+    bdf_param_list: [
+        {
+            bdf_file_name: "cbush_test.bdf.txt",
+            question_param_list: [
+                "First modify the value of the Y axis to {99} in all grid cards with ID {[4, 6]} in BULK data, then return the card",
+                "First modify the value of Spring stiffness in X to {9999} in all bush cards with PID with ID {[2]} in BULK data, then return the card",
+                "First modify the value of Poisson's Ratio to {99} in all material cards with MID of {[1]} in BULK data, then return the card",
+                "First modify the value of Young's Modulus to {99} in all material cards with MID of {[1]} in BULK data, then return the card",
+                "First modify the id of the grid node being constrained with 73 to {999} in all constraint cards including SPC with ID {[3]} in BULK data, then return the card",
+                "First modify the degree of the grid node being constrained to full constraint whose id of the grid node being constrained is 8 in all constraint cards including SPC with ID {[3]} in BULK data, then return the card",
+                "First modify the coordinates of the origin of the coordinate system to {9,9,9} in all CORD2R cards with ID {[3]} in BULK data, then return the card",
+                "First modify the value of the MID to {99} in all PSOLID cards with ID {[1]} in BULK data, then return the card",
+            ],
+        },
+    ],
+}
+2025-03-27 13:27:34,420 - 13-27-34.txt - INFO - -----------------current bdf file is 【cbush_test.bdf.txt】
+2025-03-27 13:27:34,420 - 13-27-34.txt - INFO - 
+2025-03-27 13:27:34,420 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【1】is【 First modify the value of the Y axis to {99} in all grid cards with ID {[4, 6]} in BULK data, then return the card 】
+2025-03-27 13:27:34,421 - 13-27-34.txt - INFO - 
+2025-03-27 13:27:34,421 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:27:34,743 - 13-27-34.txt - INFO - 
+2025-03-27 13:27:34,743 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【1】is【 First modify the value of the Y axis to {99} in all grid cards with ID {[4, 6]} in BULK data, then return the card 】
+2025-03-27 13:27:40,222 - 13-27-34.txt - INFO - token usage =【3】,time usage =【0.0】
+2025-03-27 13:27:40,222 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【1】is 
+问题不正确
+2025-03-27 13:27:40,223 - 13-27-34.txt - INFO - 
+2025-03-27 13:27:40,223 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:27:40,506 - 13-27-34.txt - INFO - 
+2025-03-27 13:27:40,506 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【1】is【 First modify the value of the Y axis to {99} in all grid cards with ID {[4, 6]} in BULK data, then return the card 】
+2025-03-27 13:28:23,491 - 13-27-34.txt - INFO - token usage =【460】,time usage =【0.0】
+2025-03-27 13:28:23,492 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【1】is 
+GRID    4               .2      99      .5125313
+GRID    6               .2      99      .5125313
+2025-03-27 13:28:23,492 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:23,492 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【2】is【 First modify the value of Spring stiffness in X to {9999} in all bush cards with PID with ID {[2]} in BULK data, then return the card 】
+2025-03-27 13:28:23,492 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:23,493 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:28:23,773 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:23,773 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【2】is【 First modify the value of Spring stiffness in X to {9999} in all bush cards with PID with ID {[2]} in BULK data, then return the card 】
+2025-03-27 13:28:26,554 - 13-27-34.txt - INFO - token usage =【86】,time usage =【0.0】
+2025-03-27 13:28:26,554 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【2】is 
+PBUSH   2       K       9999.   200000. 300000. .15     .25     .35     +
++               B       1000.   2000.   3000.   .0015   .0025   .0035
+2025-03-27 13:28:26,555 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:26,555 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:28:26,842 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:26,842 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【2】is【 First modify the value of Spring stiffness in X to {9999} in all bush cards with PID with ID {[2]} in BULK data, then return the card 】
+2025-03-27 13:28:53,222 - 13-27-34.txt - INFO - token usage =【367】,time usage =【0.0】
+2025-03-27 13:28:53,223 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【2】is 
+PBUSH   2       K       9999    200000. 300000. .15     .25     .35     +
++               B       1000.   2000.   3000.   .0015   .0025   .0035
+2025-03-27 13:28:53,223 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:53,223 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【3】is【 First modify the value of Poisson's Ratio to {99} in all material cards with MID of {[1]} in BULK data, then return the card 】
+2025-03-27 13:28:53,223 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:53,223 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:28:53,497 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:53,497 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【3】is【 First modify the value of Poisson's Ratio to {99} in all material cards with MID of {[1]} in BULK data, then return the card 】
+2025-03-27 13:28:58,122 - 13-27-34.txt - INFO - token usage =【3】,time usage =【0.0】
+2025-03-27 13:28:58,123 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【3】is 
+问题不正确
+2025-03-27 13:28:58,123 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:58,124 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:28:58,405 - 13-27-34.txt - INFO - 
+2025-03-27 13:28:58,405 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【3】is【 First modify the value of Poisson's Ratio to {99} in all material cards with MID of {[1]} in BULK data, then return the card 】
+2025-03-27 13:29:34,308 - 13-27-34.txt - INFO - token usage =【277】,time usage =【0.0】
+2025-03-27 13:29:34,308 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【3】is 
+MAT1    1       7.2+10          99     2660.
+2025-03-27 13:29:34,308 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:34,308 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【4】is【 First modify the value of Young's Modulus to {99} in all material cards with MID of {[1]} in BULK data, then return the card 】
+2025-03-27 13:29:34,309 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:34,309 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:29:34,581 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:34,581 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【4】is【 First modify the value of Young's Modulus to {99} in all material cards with MID of {[1]} in BULK data, then return the card 】
+2025-03-27 13:29:35,415 - 13-27-34.txt - INFO - token usage =【3】,time usage =【0.0】
+2025-03-27 13:29:35,415 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【4】is 
+问题不正确
+2025-03-27 13:29:35,416 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:35,416 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:29:35,687 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:35,687 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【4】is【 First modify the value of Young's Modulus to {99} in all material cards with MID of {[1]} in BULK data, then return the card 】
+2025-03-27 13:29:53,336 - 13-27-34.txt - INFO - token usage =【259】,time usage =【0.0】
+2025-03-27 13:29:53,336 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【4】is 
+MAT1    1       99              .33     2660.
+2025-03-27 13:29:53,337 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:53,337 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【5】is【 First modify the id of the grid node being constrained with 73 to {999} in all constraint cards including SPC with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:29:53,338 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:53,338 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:29:53,620 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:53,621 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【5】is【 First modify the id of the grid node being constrained with 73 to {999} in all constraint cards including SPC with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:29:58,660 - 13-27-34.txt - INFO - token usage =【3】,time usage =【0.0】
+2025-03-27 13:29:58,660 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【5】is 
+问题不正确
+2025-03-27 13:29:58,661 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:58,661 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:29:58,937 - 13-27-34.txt - INFO - 
+2025-03-27 13:29:58,937 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【5】is【 First modify the id of the grid node being constrained with 73 to {999} in all constraint cards including SPC with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:30:34,303 - 13-27-34.txt - INFO - token usage =【583】,time usage =【0.0】
+2025-03-27 13:30:34,303 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【5】is 
+SPC     3       8       345
+SPC     3       9       345
+SPC     3       10      345
+SPC     3       11      345
+SPC     3       12      345
+SPC     3       38      345
+SPC     3       39      345
+SPC     3       40      345
+SPC     3       41      345
+SPC     3       42      345
+SPC     3       43      345
+SPC     3       44      345
+SPC     3       45      345
+SPC     3       46      345
+SPC     3       47      345
+SPC     3       48      345
+SPC     3       49      345
+SPC     3       50      345
+SPC     3       51      345
+SPC     3       52      345
+SPC     3       53      345
+SPC     3       70      345
+SPC     3       71      345
+SPC     3       72      345
+SPC     3       999     345
+2025-03-27 13:30:34,303 - 13-27-34.txt - INFO - 
+2025-03-27 13:30:34,304 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【6】is【 First modify the degree of the grid node being constrained to full constraint whose id of the grid node being constrained is 8 in all constraint cards including SPC with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:30:34,304 - 13-27-34.txt - INFO - 
+2025-03-27 13:30:34,304 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:30:34,579 - 13-27-34.txt - INFO - 
+2025-03-27 13:30:34,579 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【6】is【 First modify the degree of the grid node being constrained to full constraint whose id of the grid node being constrained is 8 in all constraint cards including SPC with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:30:47,888 - 13-27-34.txt - INFO - token usage =【375】,time usage =【0.0】
+2025-03-27 13:30:47,889 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【6】is 
+SPC     3       8       123456
+
+SPC     3       9       345
+SPC     3       10      345
+SPC     3       11      345
+SPC     3       12      345
+SPC     3       38      345
+SPC     3       39      345
+SPC     3       40      345
+SPC     3       41      345
+SPC     3       42      345
+SPC     3       43      345
+SPC     3       44      345
+SPC     3       45      345
+SPC     3       46      345
+SPC     3       47      345
+SPC     3       48      345
+SPC     3       49      345
+SPC     3       50      345
+SPC     3       51      345
+SPC     3       52      345
+SPC     3       53      345
+SPC     3       70      345
+SPC     3       71      345
+SPC     3       72      345
+SPC     3       73      345
+2025-03-27 13:30:47,889 - 13-27-34.txt - INFO - 
+2025-03-27 13:30:47,889 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:30:48,173 - 13-27-34.txt - INFO - 
+2025-03-27 13:30:48,174 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【6】is【 First modify the degree of the grid node being constrained to full constraint whose id of the grid node being constrained is 8 in all constraint cards including SPC with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:32:56,963 - 13-27-34.txt - INFO - token usage =【558】,time usage =【0.0】
+2025-03-27 13:32:56,963 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【6】is 
+SPC     3       8       123456
+SPC     3       9       345
+SPC     3       10      345
+SPC     3       11      345
+SPC     3       12      345
+SPC     3       38      345
+SPC     3       39      345
+SPC     3       40      345
+SPC     3       41      345
+SPC     3       42      345
+SPC     3       43      345
+SPC     3       44      345
+SPC     3       45      345
+SPC     3       46      345
+SPC     3       47      345
+SPC     3       48      345
+SPC     3       49      345
+SPC     3       50      345
+SPC     3       51      345
+SPC     3       52      345
+SPC     3       53      345
+SPC     3       70      345
+SPC     3       71      345
+SPC     3       72      345
+SPC     3       73      345
+2025-03-27 13:32:56,964 - 13-27-34.txt - INFO - 
+2025-03-27 13:32:56,964 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【7】is【 First modify the coordinates of the origin of the coordinate system to {9,9,9} in all CORD2R cards with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:32:56,965 - 13-27-34.txt - INFO - 
+2025-03-27 13:32:56,965 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:32:57,234 - 13-27-34.txt - INFO - 
+2025-03-27 13:32:57,236 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【7】is【 First modify the coordinates of the origin of the coordinate system to {9,9,9} in all CORD2R cards with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:33:02,773 - 13-27-34.txt - INFO - token usage =【3】,time usage =【0.0】
+2025-03-27 13:33:02,774 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【7】is 
+问题不正确
+2025-03-27 13:33:02,774 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:02,775 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:33:03,051 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:03,052 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【7】is【 First modify the coordinates of the origin of the coordinate system to {9,9,9} in all CORD2R cards with ID {[3]} in BULK data, then return the card 】
+2025-03-27 13:33:32,895 - 13-27-34.txt - INFO - token usage =【443】,time usage =【0.0】
+2025-03-27 13:33:32,896 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【7】is 
+CORD2R  3               9.      9.      9.      0.      -1.     0.      +
++       0.      0.      -1.
+2025-03-27 13:33:32,896 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:32,897 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【8】is【 First modify the value of the MID to {99} in all PSOLID cards with ID {[1]} in BULK data, then return the card 】
+2025-03-27 13:33:32,897 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:32,897 - 13-27-34.txt - INFO - -----------------current model is 【Qwen/Qwen2.5-32B-Instruct】
+2025-03-27 13:33:33,167 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:33,167 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【8】is【 First modify the value of the MID to {99} in all PSOLID cards with ID {[1]} in BULK data, then return the card 】
+2025-03-27 13:33:37,760 - 13-27-34.txt - INFO - token usage =【3】,time usage =【0.0】
+2025-03-27 13:33:37,761 - 13-27-34.txt - INFO - model【Qwen/Qwen2.5-32B-Instruct】响应【8】is 
+问题不正确
+2025-03-27 13:33:37,761 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:37,762 - 13-27-34.txt - INFO - -----------------current model is 【deepseek-ai/DeepSeek-R1】
+2025-03-27 13:33:38,038 - 13-27-34.txt - INFO - 
+2025-03-27 13:33:38,039 - 13-27-34.txt - INFO - bdf【cbush_test.bdf.txt】问题【8】is【 First modify the value of the MID to {99} in all PSOLID cards with ID {[1]} in BULK data, then return the card 】
+2025-03-27 13:34:11,950 - 13-27-34.txt - INFO - token usage =【251】,time usage =【0.0】
+2025-03-27 13:34:11,951 - 13-27-34.txt - INFO - model【deepseek-ai/DeepSeek-R1】响应【8】is 
+PSOLID  1       99

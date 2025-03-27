@@ -4,6 +4,13 @@ import time
 
 import json5
 
+# 获取当前脚本的绝对路径（C:\Project\ai_for_bdf\rq1c\modify_card_element_api.py）
+current_script_path = os.path.abspath(__file__)
+# 获取 rq1c 的父目录（C:\Project\ai_for_bdf）
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+# 添加到 sys.path，让 Python 能找到 rq1c
+sys.path.append(project_root)
+
 from rq1c.file_util import logger_config
 
 sys.path.append("./")
@@ -85,14 +92,14 @@ class TokenCountCallbackHandler(BaseCallbackHandler):
 if __name__ == "__main__":
     # 初始化日志格式
     date_str = time.strftime('%Y-%m-%d', time.localtime())
-    time_str = time.strftime('%H:%M:%S', time.localtime())
+    time_str = time.strftime('%H-%M-%S', time.localtime())
     result_path = os.path.join(os.getcwd(), f"result/{date_str}")
     logger = logger_config(result_path, f"{time_str}.txt")
 
     logger.info(f"-------------------------start new experiment-------------------------------")
 
     # 初始化模型参数，json5字符串
-    with open("package.json", encoding="utf-8") as f1:
+    with open("rq1c/package.json", encoding="utf-8") as f1:
         params = json5.load(f1)
         logger.info(f"current package.json param is {json5.dumps(params, indent=4)}")
 
@@ -101,7 +108,7 @@ if __name__ == "__main__":
     for bdf_param_dict in bdf_param_list:
         bdf_file_name = bdf_param_dict["bdf_file_name"]
         root_path = os.path.abspath(os.path.dirname(os.getcwd()))
-        bdf_file_path = os.path.join(root_path, "data", bdf_file_name)
+        bdf_file_path = os.path.join(root_path, "AI_FOR_BDF\data", bdf_file_name)
         logger.info(f"-----------------current bdf file is 【{bdf_file_name}】")
 
         question_param_list = bdf_param_dict["question_param_list"]
